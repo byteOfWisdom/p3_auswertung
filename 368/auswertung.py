@@ -15,18 +15,6 @@ def main():
         'e': gitter.resolution,
     }
 
-#    plt.xkcd()
-#    rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
-#    rc('font',**{'family':'serif','serif':['Times']})
-#    rc('font', **{'family':'fantasy','fantasy':['xkcd script']})
-    rc('text', usetex=True)
-#    plt.rcParams['font.family'] = 'fantasy'
-#    plt.rcParams['font.fantasy'] = 'xkcd script'
-    plt.rcParams['text.latex.preamble'] = r'\usepackage{comicsans}'
-    plt.rcParams['font.family'] = 'sans-serif'
-    plt.rcParams['font.sans-serif'] = 'Comic Sans MS'
-#    plt.rcParams['text.usetex'] = True
-
     preview = tools.task_list.run_task_list(tasks)
 
     if not preview:

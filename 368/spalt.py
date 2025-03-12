@@ -26,7 +26,6 @@ def spalt(preview, data=None):
     note_var('a', params[0])
     note_var('b', params[1])
     note_var('l1', l1)
-    rcParams.update({"text.usetex": False})
     plot = Plot('m', r'$x_m [mm]$')
     plot.title = 'Lage der Beugungsminima'
     plot.add_element(m, xm, label='Lage der Minima', color=carr[0])
