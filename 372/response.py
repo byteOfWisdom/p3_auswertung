@@ -1,4 +1,4 @@
-from labtools.defaults import *
+from labtools import *
 import background
 
 def response_time(preview, data_file=None):

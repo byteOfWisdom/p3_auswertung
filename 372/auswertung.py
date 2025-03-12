@@ -1,10 +1,12 @@
 #!python3
 
-import labtools as tools
+from labtools import *
 import response
 import leslie
 import temperature
 import distance
+
+from matplotlib import pyplot as plt
 
 def main():
     tasks = {
@@ -14,14 +16,14 @@ def main():
         'd': temperature.temp_relation,
     }
 
-    preview = tools.task_list.run_task_list(tasks)
+    preview = run_task_list(tasks)
 
     if not preview:
-        tools.notes.write_notes('results/notes.txt')
+        write_notes('results/notes.txt')
     else:
-        tools.notes.print_notes()
+        print_notes()
 
-    tools.easyparse.merge_all()
+    merge_all()
 
 
 if __name__ == '__main__':

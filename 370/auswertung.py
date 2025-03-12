@@ -15,9 +15,9 @@ def main():
     preview = tools.task_list.run_task_list(tasks)
 
     if not preview:
-        tools.notes.write_notes('results/notes.txt')
+        tools.defaults.write_notes('results/notes.txt')
     else:
-        tools.notes.print_notes()
+        tools.defaults.print_notes()
 
     tools.easyparse.merge_all()
 

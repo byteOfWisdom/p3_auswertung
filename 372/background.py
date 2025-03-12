@@ -1,4 +1,4 @@
-from labtools.defaults import *
+from labtools import *
 
 def get_background(data_file, bg_index):
     U_n = unpack_data(data_file['background'], 

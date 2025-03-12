@@ -31,7 +31,7 @@ def leslie_cube(preview, data_file=None):
         r'T_p [K]': Tp,
         r'U_p [mV]': Up,
     }
-    
+
     table_2 = {
         r'T_b [K]': Tb,
         r'U_b [mV]': Ub,
@@ -44,10 +44,10 @@ def leslie_cube(preview, data_file=None):
 
     line = lambda x, a, b: a * x + b
 
-    fm, params_m = fit_func(line, (Tm ** 4) - (T0 ** 4), convert_to_power(Um))
-    fb, params_b = fit_func(line, (Tb ** 4) - (T0 ** 4), convert_to_power(Ub))
-    fw, params_w = fit_func(line, (Tw ** 4) - (T0 ** 4), convert_to_power(Uw))
-    fp, params_p = fit_func(line, (Tp ** 4) - (T0 ** 4), convert_to_power(Up))
+    fm, params_m = fit_func(line, (Tm ** 4) - (T0 ** 4), convert_to_power(Um), False)
+    fb, params_b = fit_func(line, (Tb ** 4) - (T0 ** 4), convert_to_power(Ub), False)
+    fw, params_w = fit_func(line, (Tw ** 4) - (T0 ** 4), convert_to_power(Uw), False)
+    fp, params_p = fit_func(line, (Tp ** 4) - (T0 ** 4), convert_to_power(Up), False)
 
     for res in [params_m, params_b, params_w, params_p]:
         note_var('a', res[0])
